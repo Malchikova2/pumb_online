@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Встановіть ПУМБ Online</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      margin: 0;
+      background: linear-gradient(to bottom right, #ffffff, #f8d8dc, #d0021b);
+      color: #2e2e2e;
+    }
+    h1 {
+      color: #d0021b;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    .button {
+      display: inline-block;
+      margin: 15px;
+      padding: 15px 25px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #d0021b;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #a70015;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Встановіть мобільний додаток ПУМБ Online</h1>
+  <p>Оберіть версію для свого пристрою:</p>
+
+  <a href="https://play.google.com/store/apps/details?id=ua.pumb&hl=uk" class="button">Завантажити для Android</a>
+  <a href="https://apps.apple.com/ua/app/pumb-online/id1277207202?l=uk" class="button">Завантажити для iPhone</a>
+
+  <script>
+    const userAgent = navigator.userAgent  navigator.vendor  window.opera;
+
+    if (/android/i.test(userAgent)) {
+      window.location.href = "https://play.google.com/store/apps/details?id=ua.pumb&hl=uk";
+    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      window.location.href = "https://apps.apple.com/ua/app/pumb-online/id1277207202?l=uk";
+    }
+  </script>
+
+</body>
+</html>
